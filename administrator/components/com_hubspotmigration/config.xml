@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<fieldset name="basic" label="Basic" description="">
+		<field name="hubspot_url" type="text" label="Hubspot URL" description="The base URL of the hubspot COS site you are migrating to" default="http://blog.savvypanda.com" />
+		<field name="api_key_type" type="list" label="Key Type" description="Select type of API Key to use for connecting to HubSpot" default="hapikey">
+			<option value="access_token">Access Token</option>
+			<option value="hapikey">HubSpot API Key</option>
+		</field>
+		<field name="api_key" type="text" label="API Key" descritpion="Hubspot API Key" default="demo" />
+		<field name="pause_time" type="text" label="Pause Time" description="Time to pause between processing each blog post on HubSpot (in seconds)" default="15" />
+		<field name="run_limit" type="text" label="Limit" description="The maximum number of blog posts to process at a time" default="3" />
+		<field name="use_html_aliases" type="list" label="Append .html to path?" description="Select whether or not to add '.html' to the path of the blogpost in hubspot" default="0">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="auto_create_authors" type="list" label="Create authors?" description="Select whether or not to automatically create a new author in HubSpot if we are unable to locate an existing author that matches for a blog post" default="0">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="log_api" type="list" label="Log API?" description="Select whether or not to log API requests for debugging" default="0">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="log_details" type="list" label="Log Details?" description="If you are logging API requests, this will capture additional details on every API request" default="0">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="hb_path_for_k2_images" type="text" label="Featured Image Path" description="The images directory where the featured images should be uploaded to in hubspot (should start with /images" default="/images/blog/old-featured-images" />
+		<field name="hb_k2_image_size" type="list" label="Featured Image Size" description="Which size image should we embed in the blog (using K2s sizing)?" default="src">
+			<option value="src">Original</option>
+			<option value="XL">XL</option>
+			<option value="L">L</option>
+			<option value="M">M</option>
+			<option value="S">S</option>
+			<option value="XS">XS</option>
+			<option value="none">--none--</option>
+		</field>
+	</fieldset>
+</config>

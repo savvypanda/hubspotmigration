@@ -1,0 +1,1 @@
+ALTER TABLE #__hubspotmigration_textmappings ADD COLUMN `is_regex` TINYINT(1) DEFAULT 0;
